@@ -57,7 +57,6 @@ export default function StorageTestPage() {
         const isBucketNotFound =
           errorMessage.includes("Bucket not found") ||
           errorMessage.includes("bucket") ||
-          error.statusCode === 404 ||
           error.name === "StorageApiError";
 
         if (isBucketNotFound) {
@@ -127,7 +126,6 @@ export default function StorageTestPage() {
         const isBucketNotFound =
           errorMessage.includes("Bucket not found") ||
           errorMessage.includes("bucket") ||
-          uploadError.statusCode === 404 ||
           uploadError.name === "StorageApiError";
 
         if (isBucketNotFound) {
